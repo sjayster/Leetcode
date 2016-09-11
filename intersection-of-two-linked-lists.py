@@ -49,7 +49,7 @@ class Solution(object):
         
     def move(self, head, diff):
         current = head
-        for i in xrange(diff)
+        for i in xrange(diff):
             current = current.next
             
         return current
