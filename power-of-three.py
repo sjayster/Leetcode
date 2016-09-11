@@ -1,4 +1,5 @@
 """
+Given an integer, write a function to determine if it is a power of three.
 Power of 3 numbers would always have a reminder of one. Keep doing that over a loop while n > 1
 Finally, if n == 1 then return True, else False
 """
