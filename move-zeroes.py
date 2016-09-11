@@ -1,4 +1,8 @@
 """
+Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+
+For example, given nums = [0, 1, 0, 3, 12], after calling your function, nums should be [1, 3, 12, 0, 0].
+
 Loop over the index
 Have a count variable that increments when a 0 is encountered.
 Once a non-zero number is seen and if count > 0, replace nums[index-count] with nums[index] and nums[index] with 0. Essentially swapping.
