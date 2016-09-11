@@ -1,5 +1,14 @@
 """
-My solution - hashmap:
+Given two arrays, write a function to compute their intersection.
+
+Example:
+Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2].
+
+Note:
+Each element in the result must be unique.
+The result can be in any order.
+
+Solution - hashmap:
 Iterate over one of the arrays and add it to a hash table.
 Create an empty result to store the result
 Iterate over 2nd list. If the element is present in the hash table and not in result, append it to result.
