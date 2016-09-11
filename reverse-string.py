@@ -1,4 +1,9 @@
 """
+Write a function that takes a string as input and returns the string reversed.
+
+Example:
+Given s = "hello", return "olleh".
+
 # Leveraging slicing operation in Python
 # s[::-1] returns every character in a string starting from the last position
 # string[start:end:step]. -1 represents the step and in our case it goes from the last character all the way to the 1st as we have left start and end fields as blank.
