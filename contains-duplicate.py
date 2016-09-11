@@ -1,4 +1,7 @@
 """
+Given an array of integers, find if the array contains any duplicates. Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.
+
+
 2 solutions:
 1. Using hash tables - straight forward solution
 If element is not in the dict, add it, else return True. Finally return False
