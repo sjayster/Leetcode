@@ -2,6 +2,7 @@
 2 solutions: bit manipulation and DP
 
 Iterative:
+ We need to iterate to num+1 as the last digit is also included
  If we & num with num-1, it will take number of 1's in a num times before it reaches 0
  Example: num = 15 = 1111, count = 0
  while num != 0: num & (num-1); count += 1
@@ -22,6 +23,9 @@ We will see what happens for result[9]
 result[9] = result[9&8] + 1 = result[8] + 1 = 1+1 = 2
 
 result[15] = result[15&14] +1 = result[14]+1 = 3+1 = 4
+
+UPDATE: In one of the threads they had mentioned that append/insert takes a lot of time. Hence allocate nums+1 times [0]
+
 
 """
 
@@ -47,13 +51,21 @@ class Solution(object):
         return result
         
         """
-        # DP
+        # DP - Sol 1
         
         result = []
         result.append(0)
         
         for i in xrange(1,num+1):
             result.insert(i, result[i&(i-1)] +1)
+            
+        return result
+        
+        # Updated Solution with - no insert or append
+        
+        result = [0] * (num+1)
+        for i in xrange(1, num+1):
+            result[i] = result[i&(i-1)] + 1
             
         return result
         """
