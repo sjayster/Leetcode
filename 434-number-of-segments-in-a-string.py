@@ -27,8 +27,8 @@ class Solution(object):
         return len(s.split())
 
         """
-        Solution 2:
-                count = 0
+        # Solution 2:
+        count = 0
         length = len(s)
         flag = False
         for i in range(length):
