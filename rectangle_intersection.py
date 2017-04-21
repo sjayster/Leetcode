@@ -1,10 +1,10 @@
 """
 To find if a collision takes place between two rectangles, the following conditions must be True
 
-1. Right side of A >= left side of B
-2. Left side of A <= right side of B
-3. Top side of A >= bottom side of B
-4. Bottom side of A <= top side of B
+1. Right side of A >= left side of B (R1.x + R1.width >= R2.x)
+2. Left side of A <= right side of B (R1.x <= R2.width + R2.x)
+3. Top side of A >= bottom side of B (R1.y + R1.height >= R2.y)
+4. Bottom side of A <= top side of B (R1.y <= R2.height + R2.y)
 
 If we happen to include the origin coordinates - Instead of (0,0), if the user wants to specify something else, we should account for that too.
 
@@ -27,12 +27,16 @@ class Solution(object):
         return False
 
 rect1 = Solution(0, 0, 5, 5)
-rect2 = Solution(1, 1, 3, 3)
+rect2 = Solution(0, 0, 5, 5)
 print Solution.intersect(rect1, rect2)
 
 rect3 = Solution(0, 0, 6, 7)
 rect4 = Solution(0, 8, 4, 5)
 print Solution.intersect(rect3, rect4)
+
+rect5 = Solution(1, 4, 4, 7)
+rect6 = Solution(7, 3, 8, 4)
+print Solution.intersect(rect5, rect6)
 
 """
 OUTPUT:
